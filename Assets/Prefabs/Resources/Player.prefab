@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 617668560291635087}
   - component: {fileID: 8087640079117447257}
   - component: {fileID: 5236228476227462101}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407592884369803686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3, y: 3, z: 0}
   m_LocalScale: {x: 0.3277776, y: 0.3277776, z: 0.3277776}
   m_Children:
   - {fileID: 4278662723662186825}
@@ -111,14 +111,21 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.02734375, y: 0.25}
-      - {x: -0.5, y: 0.02734375}
-      - {x: -0.5, y: -0.015625}
-      - {x: -0.0703125, y: -0.25}
-      - {x: 0.02734375, y: -0.25}
-      - {x: 0.5, y: -0.02734375}
-      - {x: 0.5, y: 0.015625}
-      - {x: 0.0703125, y: 0.25}
+    - - {x: -0.00893916, y: 2.1923184}
+      - {x: -0.48388195, y: 1.0249622}
+      - {x: -0.7870424, y: 0.9130088}
+      - {x: -0.8345785, y: 0.46414244}
+      - {x: -2.5129251, y: -1.0310282}
+      - {x: -2.1343784, y: -1.7962945}
+      - {x: -0.6753943, y: -1.8133014}
+      - {x: -0.5976566, y: -2.166018}
+      - {x: 0.5284716, y: -2.159246}
+      - {x: 0.6863788, y: -1.7910464}
+      - {x: 2.1071494, y: -1.8004115}
+      - {x: 2.546959, y: -1.0009899}
+      - {x: 0.787528, y: 0.5054054}
+      - {x: 0.7810924, y: 0.9302748}
+      - {x: 0.44126478, y: 1.0258257}
 --- !u!50 &8087640079117447257
 Rigidbody2D:
   serializedVersion: 4
@@ -157,7 +164,8 @@ MonoBehaviour:
   _rigidbody: {fileID: 8087640079117447257}
   _bullet: {fileID: 5497081498879801444, guid: 991a951174a257a49b3ab15e0bf53bb6, type: 3}
   _barrel: {fileID: 4278662723662186825}
-  _force: 1500
+  _bulletForce: 1000
+  _healthPoints: 2
 --- !u!1 &8369554288593169087
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,7 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4278662723662186825}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
