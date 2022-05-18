@@ -7,6 +7,8 @@ namespace Asteroid
         public const string SATELITE = "Satelite";
         public const string POOL_ENEMIES = "Pool_Enemies";
         public const string BULLET = "Bullet";
+        public const string CIRCLE = "Circle";
+        public const string ENEMYS = "Enemys";
 
     }
 }

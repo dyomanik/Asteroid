@@ -1,23 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 namespace Asteroid 
 {
-    public class Ammunition :IFire
+    public sealed class Ammunition : IFire
     {
-        private readonly Rigidbody2D _bullet;
-        private readonly ICreate _create;
+        private readonly Transform _barrel;
+        private readonly float _bulletForce;
+        private BulletByBuilder _bulletByBuilder;
 
-        public Ammunition(Rigidbody2D bullet, ICreate create)
+        public Ammunition(Transform barrel, float bulletForce)
         {
-            _bullet = bullet;
-            _create = create;
+            _barrel = barrel;
+            _bulletForce = bulletForce;
         }
+
         public void Shoot()
         {
-            var bullet = _create.Instantiate<Rigidbody2D>(_bullet.gameObject);
-            bullet.AddForce(Vector2.up);
-            //_create.Destroy(_bullet.gameObject);
+            _bulletByBuilder = new BulletByBuilder();
+            _bulletByBuilder.ActiveBullet(_barrel, _bulletForce);
         }
     }
 }

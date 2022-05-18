@@ -21,7 +21,7 @@ namespace Asteroid
             var moveRigidbody = new AccelerationRigidbody(_rigidbody, _speed, _acceleration);
             var rotation = new RotationShip(transform);
             ship = new Ship(moveRigidbody, rotation);
-            firing = new Ammo(_barrel,_bulletForce);
+            firing = new Ammunition(_barrel,_bulletForce);
             _damage = new Damage(_healthPoints);
         }
 

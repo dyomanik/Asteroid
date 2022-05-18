@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace Asteroid 
 {
-    public class Ammo : IFire
+    public sealed class Ammo : IFire
     {
         private readonly Transform _barrel;
         private readonly float _bulletForce;
