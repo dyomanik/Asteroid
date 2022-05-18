@@ -30,7 +30,7 @@ namespace Asteroid
             {
                 _player.ship.RemoveAcceleration();
             }
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 _player.firing.Shoot();
             }

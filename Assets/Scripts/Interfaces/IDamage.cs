@@ -3,7 +3,7 @@ namespace Asteroid
 {
     public interface IDamage
     {
-        float healthPoints { get; }
+        int healthPoints { get; }
         void Hit(GameObject gameObject);
     }
 }
