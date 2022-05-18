@@ -18,9 +18,10 @@ namespace Asteroid
         private void Start()
         {
             var moveRigidbody = new AccelerationRigidbody(_rigidbody, _speed, _acceleration);
-            var rotationRigidbody = new RotationShip(transform);
-            ship = new Ship(moveRigidbody, rotationRigidbody);
-            firing = new Fire(_bullet, _barrel, _force);
+            var rotation = new RotationShip(transform);
+            ship = new Ship(moveRigidbody, rotation);
+            firing = new Ammunition(_barrel,_bulletForce);
+            _damage = new Damage(_healthPoints);
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
